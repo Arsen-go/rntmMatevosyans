@@ -23,7 +23,6 @@
 	});
 
 	/**
-	 * Applies parallax scrolling to an element's background image.
 	 * @return {jQuery} jQuery object.
 	 */
 	$.fn._parallax = (browser.name == 'ie' || browser.name == 'edge' || browser.mobile) ? function () { return $(this) } : function (intensity) {
@@ -91,21 +90,18 @@
 
 	};
 
-	// Play initial animations on page load.
 	$window.on('load', function () {
 		window.setTimeout(function () {
 			$body.removeClass('is-preload');
 		}, 100);
 	});
 
-	// Clear transitioning state on unload/hide.
 	$window.on('unload pagehide', function () {
 		window.setTimeout(function () {
 			$('.is-transitioning').removeClass('is-transitioning');
 		}, 250);
 	});
 
-	// Fix: Enable IE-only tweaks.
 	if (browser.name == 'ie' || browser.name == 'edge')
 		$body.addClass('is-ie');
 
