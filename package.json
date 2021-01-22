@@ -1,0 +1,24 @@
+{
+  "name": "rntm",
+  "version": "1.0.0",
+  "description": "Forty by HTML5 UP\r html5up.net | @ajlkn\r Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arsen",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.5.3",
+    "email-validator": "^2.0.4",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.7",
+    "nodemailer": "^6.4.17",
+    "path": "^0.12.7",
+    "public": "^0.1.5"
+  },
+  "devDependencies": {
+    "eslint": "^7.17.0"
+  }
+}
