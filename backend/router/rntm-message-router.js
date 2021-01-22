@@ -1,5 +1,5 @@
-const controller = require("../controller/rntm-meesage-controller")
-const mail = require("../mail_controller/rntm-mail")
+const controller = require("../controller/rntm-meesage-controller");
+const mail = require("../mail_controller/rntm-mail");
 var validator = require("email-validator");
 
 function saveUserMessage(req, res) {
@@ -12,4 +12,4 @@ function saveUserMessage(req, res) {
 
 module.exports = {
     saveUserMessage,
-}
+};

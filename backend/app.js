@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-const rntmMessageRouter=require("./router/rntm-message-router");
+const router =require("./router");
 //app.use(bodyParser.urlencoded({ extended: false }));
 const path = require("path");
 app.use(bodyParser.json());
@@ -20,4 +20,6 @@ app.listen(3000, () => {
 
 app.get("/", () => { });
 
-app.post("/messageRntm", rntmMessageRouter.saveUserMessage);
+app.post("/messageRntm", router.saveUserMessage);
+
+app.post("/saveUser", router.saveUser);
