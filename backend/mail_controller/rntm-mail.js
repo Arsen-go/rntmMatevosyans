@@ -1,5 +1,5 @@
 const nodemailer = require("nodemailer");
-var validator = require("email-validator");
+const validator = require("email-validator");
 
 
 function sendMailRntm(req) {
@@ -28,6 +28,40 @@ function sendMailRntm(req) {
     }
 }
 
+function sendMailToUser(req, res) {
+    let txt = Math.floor(Math.random() * 10000);
+    let email = req.body.email;
+    const transport = nodemailer.createTransport({
+        service: "Gmail",
+        auth: {
+            user: "matevosyan20002@gmail.com",
+            pass: "ars0220742"
+        }
+    });
+
+    const mailOptions = {
+        from: "RNTM Matevosyans",
+        to: email,
+        subject: "Thank you",
+        text: `Thank you for your message:I will answer within 24 hours։ `
+    };
+    if (validator.validate(email)) {
+        transport.sendMail(mailOptions, function (error, info) {
+            if (error) {
+                console.log(error);
+                res.json({ isSend: false, info: `${error}` });
+            } else {
+                console.log("Email sent: " + info.response);
+                res.json({ registrationCode: txt, isSend: true, info: "message is sent" });
+            }
+        });
+    } else {
+        console.log("mail validation error", validator.validate(email))
+        res.json({ isSend: false, info: "Email validation error" });
+    }
+}
+
 module.exports = {
-    sendMailRntm,
+    sendMailRntm, 
+    sendMailToUser,
 };
