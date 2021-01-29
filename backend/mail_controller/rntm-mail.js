@@ -42,8 +42,8 @@ function sendMailToUser(req, res) {
     const mailOptions = {
         from: "RNTM Matevosyans",
         to: email,
-        subject: "Thank you",
-        text: `Thank you for your message:I will answer within 24 hours։ `
+        subject: "RNTM Matevosyans",
+        text: "Thank you for your message:I will answer within 24 hours։ "
     };
     if (validator.validate(email)) {
         transport.sendMail(mailOptions, function (error, info) {
