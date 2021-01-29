@@ -64,6 +64,6 @@ function saveUserEmail() {
         .then((obj) => {
             localStorage.setItem("userEmail", obj.result.email);
             localStorage.setItem("userName", obj.result.name);
-            window.location.href = "./main-page.html";
+            window.location.href = "/main-page.html";
         });
 }
