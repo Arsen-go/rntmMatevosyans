@@ -14,7 +14,7 @@ app.use(express.static("../assets"));
 app.use(express.static(path.join(__dirname, "node_modules")));
 app.use(express.static(path.join(__dirname, "node_modules")));
 
-const port = Process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log("server listening port-> 3000");
 });
