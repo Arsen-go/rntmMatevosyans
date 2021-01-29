@@ -19,7 +19,10 @@ app.listen(port, () => {
     console.log("server listening port-> 3000");
 });
 
-app.get("/", () => { });
+app.get("/", (req,res) => { 
+    res.sendFile(path.join(__dirname + "/index.html"));
+
+ });
 
 app.post("/messageRntm", router.saveUserMessage);
 
