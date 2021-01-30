@@ -5,7 +5,7 @@
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/jpg" href="./a.png"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="main.css" />
+		<link rel="stylesheet" href="css/mainpage.css" />
 		<noscript><link rel="stylesheet" href="noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -15,7 +15,7 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<a href="main-page.html" class="logo"><strong>RNTM</strong> <span>Matevosyans</span></a>
+						<a href="/home" class="logo"><strong>RNTM</strong> <span>Matevosyans</span></a>
 						<nav>
 							<a href="#menu">Menu</a>
 						</nav>
@@ -24,9 +24,9 @@
 				<!-- Menu -->
 					<nav id="menu">
 						<ul class="links">
-							<li><a href="main-page.html">Home</a></li>
-							<li><a href="./rntm.html">RNTM</a></li>
-							<li><a href="./about-me.html">AboutMe</a></li>
+							<li><a href="/home">Home</a></li>
+							<li><a href="/rntm">RNTM</a></li>
+							<li><a href="/aboutMe">AboutMe</a></li>
 						</ul>
 						<!-- <ul class="actions stacked">
 							<li><a href="#" class="button primary fit">Sign In</a></li>
@@ -67,10 +67,10 @@
 								</article>
 								<article>
 									<span class="image">
-										<img src="./it.jpg" alt="" />
+										<img src="images/it.jpg" alt="" />
 									</span>
 									<header class="major">
-										<h3><a href="contact-rntm.html" class="link">Contact RN&TM</a></h3>
+										<h3><a href="/contactRntm" class="link">Contact RN&TM</a></h3>
 										<p>Do you have any question?</p>
 									</header>
 								</article>
@@ -88,7 +88,7 @@
 										<img src="./sup.jpg" alt="" />
 									</span>
 									<header class="major">
-										<h3><a href="./about-me.html" class="link">About Me</a></h3>
+										<h3><a href="/aboutMe" class="link">About Me</a></h3>
 										<p>See my education and experience</p>
 									</header>
 								</article>
@@ -134,6 +134,23 @@
 		<script src="./breakpoints.min.js"></script>
 		<script src="./util.js"></script>
 		<script src="./main.js"></script>
+			<style>
+				
+	body.is-preload #banner:after {
+		opacity: 0.85;
+	}
 
+	body.is-preload #banner > .inner {
+		-moz-filter: none;
+		-webkit-filter: none;
+		-ms-filter: none;
+		filter: none;
+		-moz-transform: none;
+		-webkit-transform: none;
+		-ms-transform: none;
+		transform: none;
+		opacity: 1;
+	}
+			</style>
 	</body>
 </html>
