@@ -1,8 +1,21 @@
+require("dotenv").config();
+// const redis = require("redis");
+
+// const client = redis.createClient(process.env.REDIS_URL, {
+//     tls: {
+//         rejectUnauthorized: false
+//     }
+// });
+// const client = redis.createClient({
+//     host: "<hostname>",
+//     port: process.env.PORT,
+//     password: "<password>"
+// });
+
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const router =require("./router");
-//app.use(bodyParser.urlencoded({ extended: false }));
 const path = require("path");
 app.use(bodyParser.json());
 const cons = require("consolidate");
