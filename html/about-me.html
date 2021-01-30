@@ -2,24 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link rel="icon" type="image/jpg" href="./a.png" />
+    <link rel="icon" type="image/jpg" href="images/a.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
     <title>ARSEN MATEVOSYAN </title>
-    <script src="./contact-rntm.js"></script>
+    <script src="/js/contact-rntm.js"></script>
 
-    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
     <!-- FONT STYLE CSS -->
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.minabout.css" rel="stylesheet" />
     <!--ANIMATED FONTAWESOME STYLE CSS -->
-    <link href="assets/css/font-awesome-animation.css" rel="stylesheet" />
+    <link href="css/font-awesome-animation.css" rel="stylesheet" />
     <!-- VEGAS STYLE CSS -->
-    <link href="assets/scripts/vegas/jquery.vegas.min.css" rel="stylesheet" />
+    <link href="plugins/vegas/jquery.vegas.min.css" rel="stylesheet" />
     <!-- SIDE MENU STYLE CSS -->
-    <link href="assets/css/component.css" rel="stylesheet" />
+    <link href="css/component.css" rel="stylesheet" />
     <!-- CUSTOM STYLE CSS -->
-    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
     <!-- GOOGLE FONT -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 </head>
@@ -147,25 +147,25 @@
                 <div class="col-md-12 ">
                     <div class="col-md-3 col-sm-3 col-xs-6">
                         <div class="team-member">
-                            <img src="./assets/img/ysu.jpg" alt="">
+                            <img src="images/ysu.jpg" alt="">
                             <h3><strong>YSU </strong></h3>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-3 col-xs-6">
                         <div class="team-member">
-                            <img src="./assets/img/sunnyschool.jpg" alt="">
+                            <img src="images/sunnyschool.jpg" alt="">
                             <h3><strong>Sunny School </strong></h3>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-3 col-xs-6">
                         <div class="team-member">
-                            <img src="./assets/img/rau.png" alt="">
+                            <img src="images/rau.png" alt="">
                             <h3><strong>RAU </strong></h3>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-3 col-xs-6">
                         <div class="team-member">
-                            <img src="./assets/img/dproc.jpg" alt="">
+                            <img src="images/dproc.jpg" alt="">
                             <h3><strong>Secondary School </strong></h3>
                         </div>
                     </div>
@@ -202,29 +202,34 @@
     <section id="#contact-sec">
         <div class="container">
             <div class="row ">
-                <div class="col-md-3 ">
+                <div class="col-md-2 ">
                     <div class="stats-div">
-                        <h3>4 </h3>
+                        <h3>3 </h3>
                         <h4>Programing language</h4>
                     </div>
                 </div>
+                <div class="col-md-2 ">
+                    <div class="stats-div">
+                        <h3>5 </h3>
+                        <h4>Frameworks</h4>
+                    </div>
+                </div>
 
-
-                <div class="col-md-3 ">
+                <div class="col-md-2 ">
                     <div class="stats-div">
                         <h3>3 </h3>
                         <h4>Language</h4>
                     </div>
 
                 </div>
-                <div class="col-md-3 ">
+                <div class="col-md-2 ">
 
                     <div class="stats-div">
                         <h3>6 </h3>
                         <h4>Certificates</h4>
                     </div>
                 </div>
-                <div class="col-md-3 ">
+                <div class="col-md-2 ">
                     <div class="stats-div">
                         <h3>10 </h3>
                         <h4>Excellence sheet</h4>
@@ -244,11 +249,11 @@
                     <div>
                         <span><i class="fa fa-home"></i>Address: Erevan</span>
                         <br />
-                        <span><i class="fa fa-phone"></i>Phone: 93-93-20-**</span>
+                        <span><i class="fa fa-phone"></i>Phone: 93-93-20-74</span>
                         <br />
                         <span><i class="fa fa-envelope-o"></i>matevosyan2000@gmail.com</span>
                         <br />
-                        <span><i class="fa fa-globe"></i>www.rntmmatevosyans.com</span>
+                        <span><i class="fa fa-globe"></i>https://matevosyans.herokuapp.com</span>
                         <br />
                     </div>
                 </div>
@@ -267,7 +272,7 @@
                             </div>
                             <div class="col-md-6 col-sm-6">
                                 <div class="form-group">
-                                    <input id="email" type="text" class="form-control" required="required"
+                                    <input id="email" type="email" class="form-control" required="required"
                                         placeholder="Your Email address">
                                 </div>
                             </div>
@@ -279,7 +284,7 @@
                                         rows="3" placeholder="Message"></textarea>
                                 </div>
                                 <div class="form-group">
-                                    <button id="sendMessage" type="submit" class="btn btn-default">Send</button>
+                                    <button id="sendMessage" onclick="sendMessageRntm()" type="submit" class="btn btn-default">Send</button>
                                 </div>
                             </div>
                         </div>
@@ -318,20 +323,16 @@
     <!-- END SOCIAL STATS SECTION-->
 
     <div class="for-full-back color-bg-one" id="footer">
-        www.rntmmatevosyans.com | RNTM | IT | Company | Websites
+        https://matevosyans.herokuapp.com | RNTM | IT | Company | Websites
 
     </div>
 
-    <script src="assets/plugins/jquery-1.10.2.js"></script>
-    <!-- BOOTSTRAP CORE SCRIPT   -->
-    <script src="assets/plugins/bootstrap.js"></script>
-    <!-- SIDE MENU SCRIPTS -->
-    <script src="assets/js/modernizr.custom.js"></script>
-    <script src="assets/js/classie.js"></script>
-    <!-- VEGAS SLIDESHOW SCRIPTS -->
-    <script src="assets/plugins/vegas/jquery.vegas.min.js"></script>
-    <!-- CUSTOM SCRIPTS -->
-    <script src="assets/js/custom.js"></script>
+    <script src="/plugins/jquery-1.10.2.js"></script>
+    <script src="/plugins/bootstrap.js"></script>
+    <script src="/js/modernizr.custom.js"></script>
+    <script src="/js/classie.js"></script>
+    <script src="/plugins/vegas/jquery.vegas.min.js"></script>
+    <script src="/js/custom.js"></script>
 
 </body>
 

@@ -1,4 +1,5 @@
 
+
 function sendMessageRntm() {
     let time = new Date();
     let currDay = time.getFullYear() + ":" + time.getMonth() + ":" + time.getDate();

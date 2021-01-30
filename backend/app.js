@@ -1,16 +1,4 @@
 require("dotenv").config();
-// const redis = require("redis");
-
-// const client = redis.createClient(process.env.REDIS_URL, {
-//     tls: {
-//         rejectUnauthorized: false
-//     }
-// });
-// const client = redis.createClient({
-//     host: "<hostname>",
-//     port: process.env.PORT,
-//     password: "<password>"
-// });
 
 const express = require("express");
 const app = express();

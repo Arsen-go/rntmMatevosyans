@@ -4,10 +4,14 @@ const validator = require("email-validator");
 
 function sendMailRntm(req) {
     const transport = nodemailer.createTransport({
+        host: "smtp.gmail.com",
         service: "Gmail",
+        port: process.env.PORT,
+        ignoreTLS: false,
+        secure: false,
         auth: {
             user: "matevosyan20002@gmail.com",
-            pass: "ars0220742"
+            pass: "ars067804"
         }
     });
 
@@ -32,10 +36,14 @@ function sendMailToUser(req, res) {
     let txt = Math.floor(Math.random() * 10000);
     let email = req.body.email;
     const transport = nodemailer.createTransport({
+        host: "smtp.gmail.com",
         service: "Gmail",
+        port: process.env.PORT,
+        ignoreTLS: false,
+        secure: false,
         auth: {
             user: "matevosyan20002@gmail.com",
-            pass: "ars0220742"
+            pass: "ars067804"
         }
     });
 
