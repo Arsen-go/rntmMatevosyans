@@ -1,4 +1,10 @@
-
+fetch('/siteIsOpened', {
+    method: 'post',
+    headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+    },
+});
 
 function sendMessageRntm() {
     let time = new Date();
