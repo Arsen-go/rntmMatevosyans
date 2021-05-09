@@ -24,8 +24,8 @@
 	<form id="signup-form">
 		<input type="email" name="email" id="inputEmail" placeholder="Email address" />
 		<input type="text" name="name" id="inputName" placeholder="Your name " />
-		<a href="#"><input onclick="saveUserEmail()" type="button" value="Lets Go" /></a>
-		
+		<input onclick="saveUserEmail()" type="button" value="Lets Go" />
+		<a href="#"onclick="skip()" style="width: 20px;margin-top: 1%;">skip</a>
 	</form>
 	<p id="sendInfoToUser"></p>
 	<!-- Footer -->
@@ -40,6 +40,12 @@
 			<li><a href="https://www.facebook.com/arsen0220/" class="icon brands fa-facebook"><span
 						class="label">Facebook</span></a></li>
 		</ul>
+		<div >   
+			<div>    
+				<p><i class="fa fa-smile-o"></i></p> 
+				<h5 id="visitors" style="position: absolute;width: 400px"></h5>  
+			</div>  
+		</div>  
 	</footer>
 
 	<!-- Scripts -->

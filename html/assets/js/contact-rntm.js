@@ -1,3 +1,17 @@
+fetch('/siteIsOpened', {
+    method: 'post',
+    headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+    },
+});
+
+fetch('/getVisitors').then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    document.getElementById("visitors").innerHTML = `You are the ${data.length}-th visitor.`;
+  });
 
 
 function sendMessageRntm() {
@@ -62,4 +76,8 @@ function saveUserEmail() {
             localStorage.setItem("userName", obj.result.name);
             window.location.href = "/home";
         });
+}
+
+function skip() {
+    window.location.href = "/home";
 }

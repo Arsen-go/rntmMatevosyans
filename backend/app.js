@@ -9,11 +9,7 @@ app.use(bodyParser.json());
 const cons = require("consolidate");
 const indexRouter = require("./router/indexRouter");
 
-// app.use(express.static("../html"));
-// app.use(express.static("../images"));
 app.use(express.static("../js"));
-// app.use(express.static("../about_me"));
-// app.use(express.static("../assets"));
 app.use(express.static("assets"));
 app.use(express.static("html"));
 app.use(express.static("html/assets"));
@@ -34,8 +30,12 @@ app.listen(port, () => {
 
 app.get("/", (req,res) => { 
     res.sendFile(path.join(__dirname,"..","/html/index.html"));
- });
+});
 
 app.post("/messageRntm", router.saveUserMessage);
 
 app.post("/saveUser", router.saveUser);
+
+app.post("/siteIsOpened", router.addOneVisitor);
+
+app.get("/getVisitors", router.getVisitorsLength);
