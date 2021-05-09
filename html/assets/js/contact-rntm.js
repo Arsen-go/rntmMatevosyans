@@ -6,6 +6,14 @@ fetch('/siteIsOpened', {
     },
 });
 
+fetch('/getVisitors').then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    document.getElementById("visitors").innerHTML = `You are the ${data.length}-th visitor.`;
+  });
+
+
 function sendMessageRntm() {
     let time = new Date();
     let currDay = time.getFullYear() + ":" + time.getMonth() + ":" + time.getDate();
@@ -68,4 +76,8 @@ function saveUserEmail() {
             localStorage.setItem("userName", obj.result.name);
             window.location.href = "/home";
         });
+}
+
+function skip() {
+    window.location.href = "/home";
 }

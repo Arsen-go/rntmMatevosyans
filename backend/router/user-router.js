@@ -27,7 +27,16 @@ class UserRouter {
             ++visitor.count;
             await visitor.save();
         } catch (error) {
-            throw new Error("Error on save user");
+            console.log("Error on add visitor.");
+        }
+    };
+
+    async getVisitorsLength(req, res) {
+        try {
+            const visitors = await Visitor.findOne({ id: "countmodelforvisitors" });
+            res.json({length: visitors.count}) ;
+        } catch (error) {
+            console.log(error);
         }
     };
 };

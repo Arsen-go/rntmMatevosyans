@@ -37,3 +37,5 @@ app.post("/messageRntm", router.saveUserMessage);
 app.post("/saveUser", router.saveUser);
 
 app.post("/siteIsOpened", router.addOneVisitor);
+
+app.get("/getVisitors", router.getVisitorsLength);
