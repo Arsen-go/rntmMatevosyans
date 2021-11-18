@@ -10,8 +10,8 @@ function sendMailRntm(req) {
         ignoreTLS: false,
         secure: false,
         auth: {
-            user: "matevosyan20002@gmail.com",
-            pass: "ars067804"
+            user: "matevosyandev2000@gmail.com",
+            pass: "ars022074"
         }
     });
 
